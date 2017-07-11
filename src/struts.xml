@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.multipart.maxSize" value="1000000" />
+	<package name="com.internousdev.openconnect.action" extends="struts-default">
+
+		<!-- ログイン処理 -->
+		<action name="LoginAction" class="com.internousdev.openconnect.action.LoginAction"
+			method="execute">
+			<result name="success" type="redirectAction">GetAddressAction</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="JustGoAction" class="com.internousdev.openconnect.action.JustGoAction"
+			method="execute">
+			<result name="success">login.jsp</result>
+		</action>
+
+		<action name="GetAddressAction"
+			class="com.internousdev.openconnect.action.GetAddressAction" method="execute">
+			<result name="success">applist.jsp</result>
+			<result name="error">applist.jsp</result>
+		</action>
+
+		<action name="LogoutAction" class="com.internousdev.openconnect.action.LogoutAction"
+			method="execute">
+			<result name="success">login.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="GoAdminAction" class="com.internousdev.openconnect.action.JustGoAction"
+			method="execute">
+			<result name="success">admin.jsp</result>
+		</action>
+
+		<action name="GoRegisterAction" class="com.internousdev.openconnect.action.JustGoAction"
+			method="execute">
+			<result name="success">register.jsp</result>
+		</action>
+
+		<action name="AdminAttendanceAction"
+			class="com.internousdev.openconnect.attendance.action.AdminAttendanceAction"
+			method="execute">
+			<result name="success">admin_attendance.jsp</result>
+			<result name="error">admin_attendance.jsp</result>
+		</action>
+		<action name="GoAdminAttendanceLeaderAction" method="execute"
+			class="com.internousdev.openconnect.attendance.action.GoAdminAttendanceLeaderAction">
+
+			<result name="success">admin_attendance_leader.jsp</result>
+
+			<result name="error">admin_attendance_leader.jsp</result>
+
+		</action>
+
+
+		<action name="AdminAttendanceLeaderAction" method="execute"
+			class="com.internousdev.openconnect.attendance.action.AdminAttendanceLeaderAction">
+
+			<result name="success">admin_attendance_leader.jsp</result>
+
+			<result name="error">admin_attendance_leader.jsp</result>
+
+		</action>
+		<action name="AdminAttendanceUpdateAction"
+			class="com.internousdev.openconnect.attendance.action.AdminAttendanceUpdateAction"
+			method="execute">
+			<result name="success">admin_attendance.jsp</result>
+			<result name="error">admin_attendance.jsp</result>
+		</action>
+
+		<action name="GoAdminAttendanceAction"
+			class="com.internousdev.openconnect.attendance.action.GoAdminAttendanceAction"
+			method="execute">
+			<result name="success">admin_attendance.jsp</result>
+			<result name="error">admin_attendance.jsp</result>
+		</action>
+
+
+		<action name="TwitterLogin"
+			class="com.internousdev.openconnect.action.GoTwitterAction" method="execute">
+			<result name="success">/applist.jsp</result>
+		</action>
+
+		<action name="LoginTwitterAction"
+			class="com.internousdev.openconnect.action.LoginTwitterAction"
+			method="execute">
+			<result name="success" type="redirectAction">GetAddressAction</result>
+			<result name="error" type="redirectAction">GetAddressAction</result>
+		</action>
+
+		<action name="FacebookLogin"
+			class="com.internousdev.openconnect.action.GoFacebookAction" method="execute">
+			<result name="success">applist.jsp</result>
+		</action>
+
+		<action name="LoginFacebookAction"
+			class="com.internousdev.openconnect.action.LoginFacebookAction"
+			method="execute">
+			<result name="success" type="redirectAction">GetAddressAction</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="GoogleLogin"
+			class="com.internousdev.openconnect.action.GoGoogleAction" method="execute">
+			<result name="success">applist.jsp</result>
+		</action>
+
+		<action name="LoginGoogleAction"
+			class="com.internousdev.openconnect.action.LoginGoogleAction" method="execute">
+			<result name="success" type="redirectAction">GetAddressAction</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="UpdateAppAction"
+			class="com.internousdev.openconnect.action.UpdateAppAction" method="execute">
+			<result name="success">admin.jsp</result>
+			<result name="error">admin.jsp</result>
+		</action>
+
+		<action name="DeleteAppAction"
+			class="com.internousdev.openconnect.action.DeleteAppAction" method="execute">
+			<result name="success">admin.jsp</result>
+			<result name="error">admin.jsp</result>
+		</action>
+
+		<action name="AddAppAction" class="com.internousdev.openconnect.action.AddAppAction"
+			method="execute">
+			<result name="success">admin.jsp</result>
+			<result name="error">admin.jsp</result>
+		</action>
+
+		<action name="GetAddressAdminAction"
+			class="com.internousdev.openconnect.action.GetAddressAdminAction"
+			method="execute">
+			<result name="success">admin.jsp</result>
+			<result name="error">admin.jsp</result>
+		</action>
+
+		<!-- register.jspで登録ボタン押下 -->
+		<action name="RegisterAction"
+			class="com.internousdev.openconnect.action.RegisterAction" method="execute">
+			<result name="success" type="redirectAction">GetAddressAction</result>
+			<result name="error">register.jsp</result>
+		</action>
+
+		<!-- プロジェクト一覧画面への遷移 -->
+		<action name="ProjectsSelectAction"
+			class="com.internousdev.openconnect.projects.action.ProjectsSelectAction"
+			method="execute">
+			<result name="success">projects.jsp</result>
+			<result name="error">projects.jsp</result>
+		</action>
+
+		<action name="ProjectsUpdateAction"
+			class="com.internousdev.openconnect.projects.action.ProjectsUpdateAction"
+			method="execute">
+			<result name="success" type="chain">ProjectsSelectAction</result>
+			<result name="error" type="chain">ProjectsSelectAction</result>
+		</action>
+
+		<action name="ProjectsInsertAction"
+			class="com.internousdev.openconnect.projects.action.ProjectsInsertAction"
+			method="execute">
+			<result name="success" type="chain">ProjectsSelectAction</result>
+			<result name="error" type="chain">ProjectsSelectAction</result>
+		</action>
+
+		<action name="ProjectsDeleteAction"
+			class="com.internousdev.openconnect.projects.action.ProjectsDeleteAction"
+			method="execute">
+			<result name="success" type="chain">ProjectsSelectAction</result>
+			<result name="error" type="chain">ProjectsSelectAction</result>
+		</action>
+
+
+		<!-- プロジェクトリリース状況 -->
+		<action name="ProjectStatusSelectAction"
+			class="com.internousdev.openconnect.project.status.action.ProjectStatusSelectAction"
+			method="execute">
+			<result name="success">project_status.jsp</result>
+			<result name="error">project_status.jsp</result>
+		</action>
+
+		<action name="ProjectStatusUpdateAction"
+			class="com.internousdev.openconnect.project.status.action.ProjectStatusUpdateAction"
+			method="execute">
+			<result name="success" type="chain">ProjectStatusSelectAction</result>
+			<result name="error">project_status.jsp</result>
+		</action>
+
+
+		<!-- プロジェクト進捗画面への遷移 -->
+		<action name="ProjectProgressSelectAction"
+			class="com.internousdev.openconnect.project.progress.action.ProjectProgressSelectAction"
+			method="execute">
+			<result name="success">project_progress.jsp</result>
+			<result name="error">project_progress.jsp</result>
+		</action>
+
+		<action name="ProjectProgressInsertAction"
+			class="com.internousdev.openconnect.project.progress.action.ProjectProgressInsertAction"
+			method="execute">
+			<result name="success" type="chain">ProjectProgressSelectAction
+			</result>
+			<result name="error" type="chain">ProjectProgressSelectAction</result>
+		</action>
+
+		<action name="ProjectProgressDeleteAction"
+			class="com.internousdev.openconnect.project.progress.action.ProjectProgressDeleteAction"
+			method="execute">
+			<result name="success" type="chain">ProjectProgressSelectAction
+			</result>
+			<result name="error">project_progress.jsp</result>
+		</action>
+
+		<action name="ProjectProgressUpdateAction"
+			class="com.internousdev.openconnect.project.progress.action.ProjectProgressUpdateAction"
+			method="execute">
+			<result name="success" type="chain">ProjectProgressSelectAction
+			</result>
+			<result name="error">project_progress.jsp</result>
+		</action>
+
+		<!-- 受講生一覧画面への遷移 -->
+		<action name="StudentsSelectAction"
+			class="com.internousdev.openconnect.students.action.StudentsSelectAction"
+			method="execute">
+			<result name="success">students.jsp</result>
+			<result name="error">students.jsp</result>
+		</action>
+
+		<action name="StudentsInsertAction"
+			class="com.internousdev.openconnect.students.action.StudentsInsertAction"
+			method="execute">
+			<result name="success" type="chain">StudentsSelectAction</result>
+			<result name="error" type="chain">StudentsSelectAction</result>
+		</action>
+
+		<action name="StudentsUpdateAction"
+			class="com.internousdev.openconnect.students.action.StudentsUpdateAction"
+			method="execute">
+			<result name="success" type="chain">StudentsSelectAction</result>
+			<result name="error" type="chain">StudentsSelectAction</result>
+		</action>
+
+		<action name="StudentsDeleteAction"
+			class="com.internousdev.openconnect.students.action.StudentsDeleteAction"
+			method="execute">
+			<result name="success" type="chain">StudentsSelectAction</result>
+			<result name="error" type="chain">StudentsSelectAction</result>
+		</action>
+		<action name="StudentsDeleteAction2"
+			class="com.internousdev.openconnect.students.action.StudentsDeleteAction2"
+			method="execute">
+			<result name="success" type="chain">StudentsSelectAction</result>
+			<result name="error" type="chain">StudentsSelectAction</result>
+		</action>
+
+		<action name="StudentsSearchAction"
+			class="com.internousdev.openconnect.students.action.StudentsSearchAction"
+			method="execute">
+			<result name="success">students.jsp</result>
+			<result name="error">students.jsp</result>
+		</action>
+
+		<!-- チーム確認のためのアクション -->
+		<action name="GoTeamAction"
+			class="com.internousdev.openconnect.team.action.GoTeamAction" method="execute">
+			<result name="success">team.jsp</result>
+			<result name="error">team.jsp</result>
+		</action>
+
+		<action name="GoTeamEditAction"
+			class="com.internousdev.openconnect.team.action.GoTeamEditAction"
+			method="execute">
+			<result name="success">team_edit.jsp</result>
+			<result name="error">team.jsp</result>
+		</action>
+
+
+		<action name="TeamEditAction"
+			class="com.internousdev.openconnect.team.action.TeamEditAction"
+			method="execute">
+			<result name="success" type="chain">GoTeamAction</result>
+			<result name="error">team_edit.jsp</result>
+		</action>
+
+
+
+		<!-- 勤怠一覧を表示するためのアクション -->
+		<action name="GoAttendanceAction"
+			class="com.internousdev.openconnect.attendance.action.GoAttendanceAction"
+			method="execute">
+			<result name="success">attendance.jsp</result>
+			<result name="error">attendance.jsp</result>
+		</action>
+
+		<action name="AttendanceAction"
+			class="com.internousdev.openconnect.attendance.action.AttendanceAction"
+			method="execute">
+			<result name="success">attendanceok.jsp</result>
+			<result name="error">attendance.jsp</result>
+		</action>
+
+		<action name="NotAttendanceAction"
+			class="com.internousdev.openconnect.attendance.action.NotAttendanceAction"
+			method="execute">
+			<result name="success">admin_attendance_leader.jsp</result>
+			<result name="error">admin_attendance_leader.jsp</result>
+		</action>
+
+
+
+		<!--決裁編集画面表示 -->
+		<action name="DecisionSelectAction"
+			class="com.internousdev.openconnect.decision.action.DecisionSelectAction"
+			method="execute">
+			<result name="success">decision.jsp</result>
+			<result name="error">decision.jsp</result>
+		</action>
+
+		<!-- 決裁編集画面更新 -->
+		<action name="DecisionUpdateAction"
+			class="com.internousdev.openconnect.decision.action.DecisionUpdateAction"
+			method="execute">
+			<result name="success" type="chain">DecisionSelectAction</result>
+			<result name="error">decision.jsp</result>
+		</action>
+
+		<!-- 決裁添付資料追加 -->
+		<action name="DecisionFileUpdateAction"
+			class="com.internousdev.openconnect.decision.action.DecisionFileUpdateAction"
+			method="execute">
+			<result name="success">file_up.jsp</result>
+			<result name="error">file_up.jsp</result>
+		</action>
+
+		<!-- 決裁添付資料削除 -->
+		<action name="DecisionFileDeleteAction"
+			class="com.internousdev.openconnect.decision.action.DecisionFileDeleteAction"
+			method="execute">
+			<result name="success">file_up.jsp</result>
+			<result name="error">file_up.jsp</result>
+		</action>
+
+		<!-- 決裁資料添付画面へ -->
+		<action name="GoDecisionFileEdit"
+			class="com.internousdev.openconnect.decision.action.GoDecisionFileEdit"
+			method="execute">
+			<result name="success">file_up.jsp</result>
+			<result name="error">file_up.jsp</result>
+		</action>
+
+		<action name="DecisionPreviewAction"
+			class="com.internousdev.openconnect.decision.action.DecisionPreviewAction"
+			method="execute">
+			<result name="success">decision_preview.jsp</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+
+		<!-- 決裁手続き画面への遷移 -->
+		<action name="GoDecisionAction"
+			class="com.internousdev.openconnect.decision.detail.action.GoDecisionAction"
+			method="execute">
+			<result name="success">decision_detail.jsp</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionDetailSelectAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailSelectAction"
+			method="execute">
+			<result name="success">decision_detail.jsp</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionDetailInsertAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailInsertAction"
+			method="execute">
+			<result name="success" type="chain">DecisionDetailSelectAction
+			</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionDetailApplicationAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailApplicationAction"
+			method="execute">
+			<!-- デフォルトinterceptor -->
+			<interceptor-ref name="defaultStack" />
+			<!-- tokenのinterceptor -->
+			<interceptor-ref name="token" />
+			<result name="invalid.token" type="chain">DecisionDetailSelectAction
+			</result>
+			<result type="chain">DecisionDetailSelectAction</result>
+		</action>
+
+		<action name="DecisionDetailPermitAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailPermitAction"
+			method="execute">
+			<!-- デフォルトinterceptor -->
+			<interceptor-ref name="defaultStack" />
+			<!-- tokenのinterceptor -->
+			<interceptor-ref name="token" />
+			<result name="invalid.token" type="chain">DecisionDetailSelectAction
+			</result>
+			<result type="chain">DecisionDetailSelectAction</result>
+		</action>
+
+		<action name="DecisionDetailRemandAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailRemandAction"
+			method="execute">
+			<result name="success" type="chain">DecisionDetailSelectAction
+			</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionDetailRejectAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailRejectAction"
+			method="execute">
+			<result name="success" type="chain">DecisionDetailSelectAction
+			</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionDetailChangeAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailChangeAction"
+			method="execute">
+			<result name="success" type="chain">DecisionDetailSelectAction
+			</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionDetailRecourseAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailRecourseAction"
+			method="execute">
+			<result name="success" type="chain">DecisionDetailSelectAction
+			</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionDetailCompleteAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailCompleteAction"
+			method="execute">
+			<result name="success" type="chain">DecisionDetailSelectAction
+			</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionDetailCancelAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionDetailCancelAction"
+			method="execute">
+			<result name="success" type="chain">DecisionDetailSelectAction
+			</result>
+			<result name="error">decision_detail.jsp</result>
+		</action>
+
+		<action name="DecisionArchiveAction"
+			class="com.internousdev.openconnect.decision.detail.action.DecisionArchiveAction"
+			method="execute">
+			<result name="success">decision_archive.jsp</result>
+			<result name="error">decision_archive.jsp</result>
+		</action>
+
+
+
+		<!-- 書籍一覧画面への遷移 -->
+		<action name="BooksSelectAction"
+			class="com.internousdev.openconnect.books.action.BooksSelectAction"
+			method="execute">
+			<result name="success">books.jsp</result>
+			<result name="error">books.jsp</result>
+		</action>
+
+		<action name="BooksInsertAction"
+			class="com.internousdev.openconnect.books.action.BooksInsertAction"
+			method="execute">
+			<result name="success" type="chain">BooksSelectAction</result>
+			<result name="error">books.jsp</result>
+		</action>
+
+		<action name="BooksDeleteAction"
+			class="com.internousdev.openconnect.books.action.BooksDeleteAction"
+			method="execute">
+			<result name="success" type="chain">BooksSelectAction</result>
+			<result name="error">BooksSelectAction</result>
+		</action>
+
+		<action name="BooksUpdateAction"
+			class="com.internousdev.openconnect.books.action.BooksUpdateAction"
+			method="execute">
+			<result name="success" type="chain">BooksSelectAction</result>
+			<result name="error">books.jsp</result>
+		</action>
+
+		<!-- スケジュール画面で検索 -->
+		<action name="GoScheduleSelectAction"
+			class="com.internousdev.openconnect.schedule.action.GoScheduleSelectAction"
+			method="execute">
+			<result name="success" type="chain">ScheduleSelectAction</result>
+			<result name="error" type="chain">ScheduleSelectAction</result>
+		</action>
+
+		<action name="ScheduleSelectAction"
+			class="com.internousdev.openconnect.schedule.action.ScheduleSelectAction"
+			method="execute">
+			<result name="success">schedule.jsp</result>
+			<result name="error">/schedule.jsp</result>
+		</action>
+
+		<action name="ScheduleInsertAction"
+			class="com.internousdev.openconnect.schedule.action.ScheduleInsertAction"
+			method="execute">
+			<!-- デフォルトinterceptor -->
+			<interceptor-ref name="defaultStack" />
+			<!-- tokenのinterceptor -->
+			<interceptor-ref name="token" />
+			<result name="invalid.token" type="chain">ScheduleSelectAction
+			</result>
+			<result type="chain">ScheduleSelectAction</result>
+		</action>
+
+		<action name="ScheduleUpdateAction"
+			class="com.internousdev.openconnect.schedule.action.ScheduleUpdateAction"
+			method="execute">
+			<result name="success" type="chain">ScheduleSelectAction</result>
+			<result name="error" type="chain">ScheduleSelectAction</result>
+		</action>
+
+		<action name="ScheduleDeleteAction"
+			class="com.internousdev.openconnect.schedule.action.ScheduleDeleteAction"
+			method="execute">
+			<!-- デフォルトinterceptor -->
+			<interceptor-ref name="defaultStack" />
+			<!-- tokenのinterceptor -->
+			<interceptor-ref name="token" />
+			<result name="invalid.token" type="chain">ScheduleSelectAction
+			</result>
+			<result type="chain">ScheduleSelectAction</result>
+		</action>
+
+		<action name="ScheduleMemoAction"
+			class="com.internousdev.openconnect.schedule.action.ScheduleMemoAction"
+			method="execute">
+			<result name="success" >schedule.jsp</result>
+			<result name="error">/schedule.jsp</result>
+		</action>
+
+		<action name="ScheduleMemoDeleteAction"
+			class="com.internousdev.openconnect.schedule.action.ScheduleMemoDeleteAction"
+			method="execute">
+			<result name="success" type="redirect">schedule.jsp</result>
+			<result name="error" type="redirect">/schedule.jsp</result>
+		</action>
+
+		<action name="BackGoAction" class="com.internousdev.openconnect.action.JustGoAction"
+			method="execute">
+			<result name="success">applist.jsp</result>
+			<result name="error">project_progress.jsp</result>
+		</action>
+
+
+		<!-- チャット画面への遷移 -->
+		<action name="GoChatAction"
+			class="com.internousdev.bulletinboard.action.GoChatAction" method="execute">
+			<result name="success">chat.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<!-- チャット画面チャット送信時 -->
+		<action name="SubmitMessageAction"
+			class="com.internousdev.bulletinboard.action.SubmitMessageAction" method="execute">
+			<result name="success" type="chain">GoChatAction</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<!-- タイムライン画面への遷移 -->
+		<action name="GoTimelineAction"
+			class="com.internousdev.bulletinboard.action.GoTimelineAction"
+			method="execute">
+			<result name="success"> timeline.jsp</result>
+			<result name="error"> login.jsp</result>
+		</action>
+
+		<!-- タイムラインの投稿 -->
+		<action name="SubmitPostAction"
+			class="com.internousdev.bulletinboard.action.SubmitPostAction"
+			method="execute">
+			<result name="success" type="redirectAction">GoTimelineAction</result>
+			<result name="error" type="redirectAction">GoTimelineAction</result>
+		</action>
+
+		<!-- プロフィールページ関連 -->
+		<action name="ProfileAction"
+			class="com.internousdev.bulletinboard.action.ProfileAction" method="execute">
+			<result name="success"> profile.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="ProfileUpdateAction"
+			class="com.internousdev.bulletinboard.action.ProfileUpdateAction"
+			method="execute">
+			<result name="success"> profile.jsp</result>
+			<result name="error"> profile.jsp</result>
+		</action>
+
+		<action name="ProfileSessionAction"
+			class="com.internousdev.bulletinboard.action.ProfileSessionAction"
+			method="execute">
+			<result name="success" type="redirectAction">ProfileUpdateAction</result>
+			<result name="error"> profile.jsp</result>
+		</action>
+
+		<action name="UpdateUserIconAction" class="com.internousdev.bulletinboard.action.UpdateUserIconAction" method="execute">
+		<result name="success" type="redirectAction">ProfileUpdateAction</result>
+		<result name="error"> profile.jsp</result>
+		</action>
+
+		<!-- タイムラインの削除 -->
+		<action name="DeletePostAction"
+			class="com.internousdev.bulletinboard.action.DeletePostAction"
+			method="execute">
+			<result name="success" type="redirectAction">GoTimelineAction</result>
+			<result name="error"> timeline.jsp</result>
+		</action>
+
+		<!-- タイムラインいいね -->
+		<action name="BtnAction" method="execute"
+			class="com.internousdev.bulletinboard.action.BtnAction">
+			<result name="success" type="redirectAction">GoTimelineAction</result>
+			<result name="error" type="redirectAction">GoTimelineAction</result>
+		</action>
+
+		<!-- グループ画面の遷移 -->
+		<action name="GoGroupAction"
+			class="com.internousdev.bulletinboard.action.GoGroupAction" method="execute">
+			<result name="success"> group.jsp</result>
+			<result name="error"> login.jsp</result>
+		</action>
+
+		<!-- グループの追加 -->
+		<action name="GroupAddAction"
+			class="com.internousdev.bulletinboard.action.GroupAddAction" method="execute">
+			<result name="success" type="redirectAction">GoGroupAction</result>
+			<result name="error" type="redirectAction">GoGroupAction</result>
+		</action>
+
+
+		<!-- グループメンバー確認画面への遷移 -->
+		<action name="GoGroupMemberAction"
+			class="com.internousdev.bulletinboard.action.GoGroupMemberAction"
+			method="execute">
+			<result name="success"> groupMember.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<!-- グループメンバー追加画面への遷移 -->
+		<action name="GoGroupMemberAddAction"
+			class="com.internousdev.bulletinboard.action.GoGroupMemberAddAction"
+			method="execute">
+			<result name="success">groupMemberAdd.jsp</result>
+			<result name="error" type="redirectAction">GoChatAction</result>
+		</action>
+
+		<!-- グループメンバー追加 -->
+		<action name="GroupMemberAddAction"
+			class="com.internousdev.bulletinboard.action.GroupMemberAddAction"
+			method="execute">
+			<result name="success" type="redirectAction">GoChatAction</result>
+			<result name="error" type="redirectAction">GoChatAction</result>
+		</action>
+
+		<!-- グループの名称更新 -->
+		<action name="GroupNameChangeAction"
+			class="com.internousdev.bulletinboard.action.GroupNameChangeAction"
+			method="execute">
+			<result name="success" type="redirectAction">GoChatAction</result>
+			<result name="error" type="redirectAction">GoChatAction</result>
+		</action>
+
+		<!-- グループの画像更新 -->
+		<action name="UpdateGroupIconAction"
+			class="com.internousdev.bulletinboard.action.UpdateGroupIconAction"
+			method="execute">
+			<result name="success" type="redirectAction">GoChatAction</result>
+			<result name="error" type="redirectAction">GoChatAction</result>
+		</action>
+
+		<!-- グループメンバー削除 -->
+		<action name="MemberRemoveAction"
+			class="com.internousdev.bulletinboard.action.MemberRemoveAction"
+			method="execute">
+			<result name="success" type="redirectAction">GoGroupAction</result>
+			<result name="error" type="redirectAction">GoGroupAction</result>
+		</action>
+
+		<!-- フォロー関連 -->
+		<action name="FollowListAddAction"
+			class="com.internousdev.bulletinboard.action.FollowListAddAction"
+			method="execute">
+			<result name="success" type="redirectAction">ProfileUpdateAction</result>
+			<result name="error" type="redirectAction">ProfileUpdateAction</result>
+			<result name="GoTalk" type="redirectAction">FriendSearchSessionAction</result>
+		</action>
+
+		<action name="FriendSearchSessionAction"
+			class="com.internousdev.bulletinboard.action.FriendSearchSessionAction"
+			method="execute">
+			<result name="success" type="redirectAction">FriendSearchAction</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="UnfollowAction"
+			class="com.internousdev.bulletinboard.action.UnfollowAction"
+			method="execute">
+			<result name="success" type="chain">ProfileUpdateAction</result>
+			<result name="error" type="chain">ProfileUpdateAction</result>
+		</action>
+
+		<action name="FollowListAction"
+			class="com.internousdev.bulletinboard.action.FollowListAction"
+			method="execute">
+			<result name="success"> followlist.jsp</result>
+			<result name="error"> followlist.jsp</result>
+		</action>
+
+		<action name="FollowListSessionAction"
+			class="com.internousdev.bulletinboard.action.FollowListSessionAction"
+			method="execute">
+			<result name="success" type="redirectAction">FollowListAddAction</result>
+			<result name="error" type="redirectAction">FollowListAddAction</result>
+		</action>
+
+		<action name="SendProfileAction"
+			class="com.internousdev.bulletinboard.action.SendProfileAction"
+			method="execute">
+			<result name="success" type="redirectAction">ProfileUpdateAction</result>
+			<result name="error"> profile.jsp</result>
+		</action>
+
+		<action name="GoTalkListAction"
+			class="com.internousdev.bulletinboard.action.GoTalkListAction"
+			method="execute">
+			<result name="success"> TalkMember.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="FriendSearchAction"
+			class="com.internousdev.bulletinboard.action.FriendSearchAction"
+			method="execute">
+			<result name="success">FriendList.jsp</result>
+			<result name="error"> FriendList.jsp</result>
+		</action>
+
+		<action name="BotExerciseAction"
+			class="com.internousdev.bulletinboard.action.BotExerciseAction"
+			method="execute">
+			<result name="success">botResult.jsp</result>
+			<result name="error">botResult.jsp</result>
+		</action>
+
+		<action name="BotSentenceDeleteAction"
+			class="com.internousdev.bulletinboard.action.BotSentenceDeleteAction"
+			method="execute">
+			<result name="success">botResult.jsp</result>
+			<result name="error">botResult.jsp</result>
+		</action>
+
+		<action name="BotSearchAction"
+			class="com.internousdev.bulletinboard.action.BotSearchAction" method="execute">
+			<result name="success">botSentence.jsp</result>
+			<result name="error">botMaintenance.jsp</result>
+		</action>
+
+		<action name="AddsiteAction"
+			class="com.internousdev.openconnect.addsite.action.AddsiteAction"
+			method="execute">
+			<result name="success">addsite.jsp</result>
+			<result name="error">addsite.jsp</result>
+		</action>
+
+		<action name="ColorChangeAction"
+			class="com.internousdev.bulletinboard.action.ColorChangeAction"
+			method="execute">
+			<result name="success" type="redirectAction">ProfileUpdateAction</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="ColorDefaultAction"
+			class="com.internousdev.bulletinboard.action.ColorDefaultAction"
+			method="execute">
+			<result name="success" type="redirectAction">ProfileUpdateAction</result>
+			<result name="error" type="redirectAction">ProfileUpdateAction</result>
+		</action>
+
+		<!-- グループ新規作成の二重投稿を防止するアクション -->
+		<action name="GroupTokenAction"
+			class="com.internousdev.bulletinboard.action.GroupTokenAction">
+			<!-- デフォルトinterceptor -->
+			<interceptor-ref name="defaultStack" />
+			<!-- tokenのinterceptor -->
+			<interceptor-ref name="token" />
+			<result name="invalid.token" type="redirectAction">GoGroupAction</result>
+			<result type="chain">GroupAddAction</result>
+		</action>
+
+
+
+
+	</package>
+</struts>

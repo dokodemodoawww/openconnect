@@ -1,0 +1,121 @@
+@CHARSET "UTF-8";
+
+
+button.group {
+	width: 100%;
+    padding: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: left;
+    background-color: #c2e2e1;
+    color: #384a5a;
+    border-style: none;
+    vertical-align: middle;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position:relative;
+}
+
+button.group:hover {
+    background-color: #50aba9;
+    color: #ffffff;
+}
+
+.groupName{
+	width: 100%;
+	border:0;
+	padding:8px;
+	color:black;
+	border:solid 1px #ccc;
+	margin:0 0 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: white;
+}
+.cursor{
+	cursor: pointer;
+}
+  .modal-sm {
+    width: 320px;
+  }
+.img-circle-ex {
+	width: 80px;
+	height: 80px;
+  	border-radius: 50%;
+  	margin-right: 10px;
+  	float: left !important;
+}
+p{
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis; /* Opera9,10対応 */
+}
+h3{
+	width: 80%;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	-o-text-overflow: ellipsis; /* Opera9,10対応 */
+}
+
+.tell{
+	position: absolute;
+	background-color:#ff0000;
+	color:white;
+	border-radius:50%;
+	bottom:10px;
+ 	right:10px;
+ 	height: 20px;
+ 	width: 20px;
+ 	text-align:center;
+}
+.tellOver{
+	position: absolute;
+	background-color:#ff0000;
+	color:white;
+	border-radius:50%;
+	bottom:10px;
+ 	right:10px;
+ 	height: 20px;
+ 	width: 40px;
+ 	text-align:center;
+}
+
+@media only screen and (max-device-width: 480px) {
+.img-circle-ex {
+	width: 50px;
+	height: 50px;
+  	border-radius: 50%;
+  	margin-right: 10px;
+  	float: left;
+}
+h3{
+	font-size: 15px;
+	  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis; /* Opera9,10対応 */
+}
+p{
+	font-size: 12px;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis; /* Opera9,10対応 */
+}
+button.group {
+	width: 100%;
+    padding: 5px;
+    margin-bottom: 2px;
+    text-align: left;
+    background-color: #c2e2e1;
+    color: #384a5a;
+    vertical-align: middle;
+}
+}

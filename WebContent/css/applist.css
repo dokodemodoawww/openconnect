@@ -1,0 +1,36 @@
+
+.topslide{
+	z-index: -1
+}
+
+.fadeout{
+    opacity: 0;
+    transition: 3s ease-in-out;
+    -webkit-transition: 3s ease-in-out;
+    width: 640px;
+    height: 360px;
+    z-index: -1
+}
+
+.fadein{
+    opacity: 1;
+    transition: 3s ease-in-out;
+    -webkit-transition: 3s ease-in-out;
+    width: 640px;
+    height: 360px;
+    z-index: -1
+}
+
+
+@media only screen and (max-device-width : 380px) {
+    #idshow1 {
+        width: 100%;
+        }
+    #idshow2 {
+ 		width: 100%;
+  	    }
+  	#table-scroll {
+        overflow-x: scroll;
+        }
+}
+

@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+
+/* table, td, th{ */
+/* 	height: 1px; */
+/* 	table-layout: fixed; */
+/* 	width:200px: */
+/* /* 		white-space: normal; */
+* /
+	/* 	display: inline; */
+	/* } */
+td {
+	text-align: center;
+}
+
+#searchText {
+	width: 150px;
+}
+
+.largetext {
+	width: 100px;
+	text-align: center;
+}
+
+/*inputのボタンデザイン*/
+.button {
+	font-size: 1em;
+	padding: 10px 30px;
+	background-color: #248;
+	color: #fff;
+	border-style: none;
+}
+
+.button {
+	background-color: #6dacfa;
+	color: #fff;
+}
+
+.button2 {
+	font-size: 1em;
+	padding: 10px 40px;
+	background-color: #248;
+	color: #fff;
+	border-style: none;
+}
+
+.button2 {
+	background-color: #6dacfa;
+	color: #fff;
+}
+
+/* 中央寄せ */
+.center {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	align: center;
+}
+
+@media only screen and (max-device-width: 900px) {
+	.add {
+		text-align: center;
+		margin-left: 0px;
+	}
+	.table-scroll {
+		overflow-x: scroll;
+	}
+	.fixedButton {
+		position: absolute;
+		text-align: center;
+	}
+}
+/*携帯ディスプレイver-----------------------------------*/
+@media only screen and (max-device-width: 575px) {
+	/*タイトル*/
+	.title {
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.center {
+		text-align: center;
+		align: center;
+	} /*文字サイズ*/
+	.fontsize {
+		font-size: 10px;
+	}
+
+	/*inputのボタンデザイン*/
+	.button {
+		font-size: 12px;
+		padding: 5px 15px;
+		background-color: #248;
+		color: #fff;
+		border-style: none;
+	}
+	.button {
+		background-color: #6dacfa;
+		color: #fff;
+	}
+	.button2 {
+		font-size: 12px;
+		padding: 5px 28px;
+		background-color: #248;
+		color: #fff;
+		border-style: none;
+	}
+	.button2 {
+		background-color: #6dacfa;
+		color: #fff;
+	}
+}

@@ -1,0 +1,129 @@
+@CHARSET "UTF-8";
+
+body{
+	padding-top: 30px;
+	padding-bottom: 70px;
+	background-color: #c2e2e1;
+}
+.stamp-form{
+	position:fixed;
+	bottom:70px;
+	left:5px;
+}
+.stamp-btn{
+	padding:0px;
+	border:none;
+	 background: transparent;
+}
+
+.m-body{
+	position:relative;
+	padding:15px;
+}
+
+
+
+@media only screen and (min-device-width: 481px) {
+
+
+.nonbs-send-form{
+	position: fixed;
+	bottom:0px;
+	height:70px;
+	right:0;
+	left:0;
+	background-color:#6FF5EF;
+}
+
+.nonbs-panel-body{
+
+
+	height:70px;
+	width:auto;
+
+
+}
+
+.nonbs-form-group{
+	text-align:center;
+
+}
+
+
+.nonbs-form-control{
+	position: fixed;
+    left: 50%;
+    width: 40%;
+    margin-left: -20%;
+    font-size:16px;
+    resize:none;
+    margin-top:10px;
+}
+
+.nonbs-rightside{
+
+	height:70px;
+	width:70px;
+	float:right;
+	margin-top:15px;
+
+}
+
+
+}
+
+.nameArea{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+@media only screen and (max-device-width: 480px) {
+
+
+body{
+	padding-top: 30px;
+	padding-bottom: 60px;
+	background-color: #c2e2e1;
+}
+
+.nonbs-send-form{
+	position:fixed;
+	bottom:0px;
+	height:70px;
+	right:0;
+	left:0;
+	background-color:#6FF5EF;
+}
+
+
+
+.nonbs-panel-body{
+
+	height:70px;
+	width:auto;
+}
+
+.nonbs-form-group{
+
+}
+
+.nonbs-form-control{
+	position: fixed;
+	width:70%;
+    font-size:16px;
+    resize:none;
+    margin-top:10px;
+    margin-left:5px;
+}
+
+.nonbs-rightside{
+	height:70px;
+	width:70px;
+	float:right;
+	margin-top:15px;
+
+}
+
+

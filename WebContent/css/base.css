@@ -1,0 +1,153 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+/*----------------------------HTML5  スタイルシート初期化----------------------------------------------*/
+
+html, body, div, span, object, iframe,
+h1, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    width:100%;
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+article{
+	width:1000px;
+	margin:10px auto;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+a:hover{
+    filter:alpha(opacity=80);
+    opacity:0.8;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:0.5px solid #ffffff;
+    margin: 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+li {list-style:none;}
+/*----------------------------クラス----------------------------------------------*/
+//センター寄せにする
+.center {
+    display: block;
+    margin: 0 auto;
+}
+//右にフロートしていく
+.right { float: right; }
+//左にフロートしていく
+.left { float: left; }
+//フロートをやめる
+.clear { clear: both; }
+//clearfix
+.cf:after{display: block;
+    clear: both;}
+
+//幅
+.top10{margin-top:10px;}
+.top20{margin-top:20px;}
+.top30{margin-top:30px;}
+.top40{margin-top:40px;}
+.top50{margin-top:50px;}
+.top100{margin-top:100px;}
+//全体
+.space10{margin:10px;}
+.space20{margin:20px;}
+
+//幅
+.left10{margin-left:10px;}
+.left20{margin-left:20px;}
+.left30{margin-left:30px;}
+.left40{margin-left:40px;}
+.left50{margin-left:50px;}
+.left100{margin-left:100px;}
+//カラー
+.pink{color:#ff9ece;}
+.orange{color:#ffe29e ;}
+.yellow{color:#ffff9e;}
+.green{color:#a8ff9e;}
+.blue{color:#9ecfff ;}
+.perple{color:#cf9eff;}

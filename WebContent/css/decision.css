@@ -1,0 +1,95 @@
+
+
+@CHARSET "UTF-8";
+
+table, td, th{
+
+	height: 30px;
+	table-layout: fixed;
+}
+
+td{
+	text-align: center;
+}
+
+input[type="text"] {
+/* 	text-align: center; */
+margin:10px 10px;
+	text-align: center;
+}
+
+#searchText{
+	width:150px;
+}
+
+#registration{
+	width:170px;
+}
+#name{
+	width:170px;
+}
+
+
+#id{
+	width:20px;
+}
+
+#display{
+	width:400;
+}
+
+.decisionid{
+	width:75px;
+}
+
+.smallText{
+	width:50px;
+}
+
+.bigText{
+	width:100px;
+}
+
+#btna{
+    margin:20px 10px 0;
+    padding:10px;
+    cursor:pointer;
+    background: #EEE;
+    color: #444;
+    border-top: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    -moz-box-shadow: -1px -1px 1px rgba(000,000,000,0.3),1px 1px 1px rgba(255,255,255,1);
+    -webkit-box-shadow: -1px -1px 1px rgba(000,000,000,0.3),1px 1px 1px rgba(255,255,255,1);
+    width: 200px;
+}
+
+#menua{
+    margin:10px;
+/*     text-align:center; */
+}
+
+#btnb{
+    margin:20px 10px 0;
+    padding:10px;
+    cursor:pointer;
+    background: #EEE;
+    color: #444;
+    border-top: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    -moz-box-shadow: -1px -1px 1px rgba(000,000,000,0.3),1px 1px 1px rgba(255,255,255,1);
+    -webkit-box-shadow: -1px -1px 1px rgba(000,000,000,0.3),1px 1px 1px rgba(255,255,255,1);
+    width: 200px;
+}
+
+#menub{
+    margin:10px;
+/*     text-align:center; */
+}
+
+.username{
+	width:100px;
+}

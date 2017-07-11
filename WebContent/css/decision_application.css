@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+.smallWidth{
+	width: 50px;
+}
+
+.middleWidth{
+	width: 80px;
+}
+
+.bigWidth{
+	width: 120px;
+}

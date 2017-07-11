@@ -1,0 +1,318 @@
+[プロジェクト管理]
+prototype
+prototype_11
+: -------------------------------------------------------------------------------------------------
+: 201407 <201407月生>
+: -------------------------------------------------------------------------------------------------
+: 2014年08月作成
+某中小企業向け 書籍管理サイト[bookmanager07] [- 改修する？ -]
+http://www.internousdev.com/bookmanager07/
+
+: 2014年09月作成
+某ショッピングサイト[shop] [- 改修する？　commit一桁 -]
+http://www.internousdev.com/shop/
+
+
+: -------------------------------------------------------------------------------------------------
+: 201408 <201408月生>
+: -------------------------------------------------------------------------------------------------
+: 2014年09月作成
+<受講生なしのため、成果物なし>
+: 2014年10月作成
+<受講生なしのため、成果物なし>
+
+
+: -------------------------------------------------------------------------------------------------
+: 201409 <201409月生>
+: -------------------------------------------------------------------------------------------------
+: 2014年10月作成
+某大手書店向け 書籍管理サイト[bookmanager09]
+http://www.internousdev.com/bookmanager09/ [- 改修する？　commit一桁 -]
+: 2014年11月作成
+某通販企業向けショッピングモールサイト [- 凍結 -]
+
+
+: -------------------------------------------------------------------------------------------------
+: 201410 <201410月生>
+: -------------------------------------------------------------------------------------------------
+
+某大手書店向け 書籍管理サイト [bookmanager] [- gitにない？ -]
+
+
+日本酒・地酒販売サイト [ec_10, ec_b_10]　[- 改修する？　両方commit一桁 -]
+http://www.internousdev.com/ec_10/
+
+
+: -------------------------------------------------------------------------------------------------
+: 201411 <201411月生>
+: -------------------------------------------------------------------------------------------------
+
+某企業向け 勤怠管理サイト [- 凍結 -?]
+
+
+某フィギュア・ホビー販売サイト [ec_11, ec_11a]　[- 改修する？　両方commit一桁 -]
+
+
+: -------------------------------------------------------------------------------------------------
+: 201412 <201412月生>
+: -------------------------------------------------------------------------------------------------
+
+某大手企業向け 勤怠管理サイト（改修版）[attendance_12]　[- 改修する？　commit一桁 -]
+
+
+某総合チケット販売サイト [chikezon]
+http://www.internousdev.com/chikezon/　[- 改修 -]
+
+c
+2015/01月生
+
+某通信販売会社 おでん通販サイトODEN [Oden]
+http://www.internousdev.com/oden/
+
+サッカーチケット購入サイトSAKATIKE [sakatike]
+http://www.internousdev.com/sakatike/
+
+健康通信販売サイトUESTO [UESTO]
+http://www.internousdev.com/uesto/
+
+
+2015/02月生
+某旅行会社向け 旅行チケット販売サイトTOURTIKE [tourtike]
+http://www.internousdev.com/tourtike/
+
+某飲食店向け 予約サイト[solare]
+http://www.internousdev.com/solare/
+
+
+2015/03月生
+某旅行会社向け 旅行チケット販売サイト [WorldTravel]
+http://www.internousdev.com/worldtravel/
+
+某旅行会社向け 宝石発掘ツアーチケット購入サイト [YouJustJewelry]
+http://www.internousdev.com/youjustjewelry/
+
+一般消費者向け コーヒー豆販売サイト [gpscoffee]
+http://www.internousdev.com/gpscoffee/
+
+
+2015/04月生
+
+某フィギュア・ホビー販売サイト（改修版）[Lapoupee]
+http://www.internousdev.com/la-poupee/
+
+某自転車レンタルサイト [UCycle]
+http://www.internousdev.com/ucycle/
+
+
+2015/05月生
+
+某ライブチケット販売サイト [liveticket]
+http://www.internousdev.com/livetickets/
+
+某野球観戦チケット販売サイト [baseballTicket]
+http://www.internousdev.com/baseballTicket/
+
+某着物レンタルサイト [IchigoIchie]
+http://www.internousdev.com/ichigoichie/
+
+2015/06月生
+
+某ゲームミュージックコンサートチケット購入専門サイト [G-Ticket]
+http://www.internousdev.com/g-tickets/
+
+某映画館向け映画鑑賞チケット販売サイト [movieTicket]
+http://www.internousdev.com/movietickets/
+
+某Tシャツ販売サイト [tBOX]
+http://www.internousdev.com/tbox/
+
+
+2015/07月生
+
+某プラネタリウム向け上映プログラムチケット販売サイト [biggalaxy]
+http://www.internousdev.com/biggalaxy/
+
+某コテージレンタル予約サイト[k-home]
+http://www.internousdev.com/k-home/
+
+2015/08月生
+
+某水族館向けチケット販売サイト[aquarium]
+
+
+某水族館向けチケット販売サイト（改修版）[aquarium]
+
+
+2015/09月生
+
+某ミュージカル劇団向けチケット販売サイト[lereve]
+http://www.internousdev.com/lereve/
+
+某書籍レーベルサイト向け 書籍販売サイト[shizuku]
+http://www.internousdev.com/shizuku/
+
+
+2015/10月生
+
+某旅行代理店向け チケット販売サイト[footprinter]
+http://www.internousdev.com/footprinter/
+
+某スポーツジム向け チケット販売サイト[ukiukiutopia]
+http://www.internousdev.com/ukiukiutopia/
+
+某ピザ宅配会社向け ピザ販売サイト[pizzaseijin]
+http://www.internousdev.com/pizzaseijin/
+
+
+2015/11月生
+
+一般消費者向け 総合映画チケット販売サイト[cinemajapan]
+http://www.internousdev.com/cinemajapan/
+
+某チョコレート販売店向け チョコレート販売サイト[chocotime]
+http://www.internousdev.com/chocotime/
+
+
+2015/12月生
+
+一般消費者向け 落語チケット販売サイト[rakuraku]
+http://www.internousdev.com/rakuraku/
+
+一般消費者向け 和菓子販売サイト[kinnosawa]
+http://www.internousdev.com/kinnosawa/
+
+
+2016/01月生
+
+一般消費者向け テーマパークチケット販売サイト[mackeypark]
+http://www.internousdev.com/mackeypark/
+
+一般消費者向け ラーメン販売サイト[kuruyama]
+http://www.internousdev.com/kuruyama/
+
+
+2016/02月生(201603)
+
+一般消費者向け 舞台チケット予約サイト[gekidanroadshow]
+http://www.internousdev.com/gekidanroadshow/
+
+2016/02月生(201604)
+
+某着物レンタルサイト [IchigoIchie][Phase2]
+http://www.internousdev.com/ichigoichie/
+
+
+2016/03月生(201604)
+
+某飲食店向け 予約サイト[solare][Phase2]
+http://www.internousdev.com/solare/
+
+健康通信販売サイトUESTO [UESTO][Phase2]
+http://www.internousdev.com/uesto/
+
+
+2016/03月生及び04月生(201605)
+
+某フィギュア・ホビー販売サイト（改修版）[Lapoupee][Phase2]
+http://www.internousdev.com/la-poupee/
+
+某ゲームミュージックコンサートチケット購入専門サイト [G-Ticket][Phase2]
+http://www.internousdev.com/g-tickets/
+
+某総合チケット販売サイト [chikezon][Phase2]
+http://www.internousdev.com/chikezon/
+
+
+2016/04月生及び05月生(201606)
+
+某ライブチケット販売サイト [liveticket][Phase2]
+http://www.internousdev.com/livetickets/
+
+某野球観戦チケット販売サイト [baseballTicket][Phase2]
+http://www.internousdev.com/baseballTicket/
+
+某着物レンタルサイト [IchigoIchie][Phase3]
+http://www.internousdev.com/ichigoichie/
+
+某Tシャツ販売サイト [tBOX][Phase2]
+http://www.internousdev.com/tbox/
+
+某プラネタリウム向け上映プログラムチケット販売サイト [biggalaxy][Phase2]
+http://www.internousdev.com/biggalaxy/
+
+一般消費者向け 総合映画チケット販売サイト[cinemajapan][Phase2]
+http://www.internousdev.com/cinemajapan/
+
+
+2016/05月生及び06月生(201607)
+
+某インターネットサービス企業向け オウンドメディアサイト[internousdev]
+http://www.internousdev.com/internousdev/
+
+プログラマカレッジ向け 統合認証基盤[openconnect]
+http://www.internousdev.com/openconnect/
+
+visa
+http://www.internousdev.com/visa/
+
+2016/06月生及び07月生(201608)
+
+某インターネットサービス企業向け オウンドメディアサイト[internousdev]
+http://www.internousdev.com/internousdev/
+
+[mira-mode]
+http://www.internousdev.com/mira-mode/
+
+[rewrite]
+http://www.internousdev.com/rewrite/
+
+
+2016/07月生及び08月生(201609)
+
+某インターネットサービス企業向け オウンドメディアサイト[internousdev]
+http://www.internousdev.com/internousdev/
+
+プログラマカレッジ向け 統合認証基盤[openconnect]
+http://www.internousdev.com/openconnect/
+
+[mastercard]
+http://www.internousdev.com/mastercard/
+
+[americanexpress]
+http://www.internousdev.com/americanexpress/
+
+
+2016/08月生及び09月生(201610)
+
+某一般消費者向け 温泉旅館予約サイト[nagomi]
+http://www.internousdev.com/nagomi/
+
+[samurai]
+http://www.internousdev.com/samurai/
+
+
+2016/09月生及び10月生(201611)
+
+[noel]
+http://www.internousdev.com/noel/
+
+[lusso]
+http://www.internousdev.com/lusso/
+
+
+2016/10月生
+
+[shiki]
+http://www.internousdev.com/shiki/
+
+[debut]
+http://www.internousdev.com/debut/
+
+2016/11月生
+
+[nadeshiko]
+http://www.internousdev.com/nadeshiko/
+
+
+2016/12月生
+

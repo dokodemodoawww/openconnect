@@ -1,0 +1,18 @@
+th{
+	background-color:#FF9900;
+}
+
+.error{
+	color: red;
+	font-weight: 700;
+}
+
+
+@media screen and (max-width: 380px){
+/* スマートフォンだけ以下を適用 */
+
+body {
+	margin:0px;
+    width:100%;
+    }
+}

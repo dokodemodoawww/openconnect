@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+
+body {
+	background-image:url("../img/uchuu.jpg");
+	background-size: 100% 100%;
+	color: white;
+}
+
+h1{
+	text-align: center;
+}
+
+.nameposition{
+	padding-left: 5px;
+	border: 2px #FFF solid;
+	background-color: rgba(00,00,80,0.7);
+	margin: 10% 30% 10% 30%;
+	position:absolution;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.formp{
+	text-align:center;
+	}
+
+#inner input[type=submit]{
+	font-size: 200%;
+	width: 20%;
+	height: 30%;
+	margin:100px 10px 0px 10px;
+}
+	@media screen and (max-width: 1024px){
+	img{
+	max-width: 100%;
+	height: auto;
+	width /***/:auto;　
+	}
+	#container{
+	width:100%;
+}
+body{
+	background-size: 100% 300%;
+}
+h1{
+	margin: 10%;
+}
+.nameposition{
+	margin: 0% 10% 0% 10%;
+	border-radius: 100%;
+}
+.success{
+	font-size: 300%;
+	margin: 10% 10% 10% 10%;
+	vertical-align: middle;
+}
+.formp{
+	height: 300px;
+}
+
+#inner input[type=submit]{
+	font-size: 200%;
+	width: 40%;
+	height: 100px;
+	margin:100px 10px 0px 10px;
+}
+
+
+
+
+

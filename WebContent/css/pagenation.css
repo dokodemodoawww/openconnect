@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+
+/*ページネーション*/
+#page_ctrl ul, #page_ctrl li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	align: center;
+	text-align:center;
+
+}
+
+#page_before li, #page_after li, #page_number li {
+	border: 1px solid #d0d0d0;
+	border-radius: 3px;
+	background: #f0f0f0;
+	color: #666666;
+	padding: 0 5px;
+	margin: 0 2px;
+}
+
+#page_ctrl li:hover {
+	background: #fafafa;
+}
+
+#page_ctrl li.terminal:hover {
+	background: #f0f0f0;
+}
+
+/* Default */
+#page_first, #page_prev, #page_number li, #page_next, #page_last {
+	cursor: pointer;
+}
+
+/* 先頭あるいは末尾ページ表示中のボタンスタイル */
+.terminal {
+	color: #000000 !important;
+	cursor: default !important;
+	color: #dddddd !important;
+}
+
+/* カレントページのスタイル */
+.current_page {
+	background: #fafafa !important;
+	font-weight: bold !important;
+}
+
+/*#pager {
+	text-align: center;
+}*/
+
+#contents {
+	z-index: 0;
+	font-size: 16px;
+}

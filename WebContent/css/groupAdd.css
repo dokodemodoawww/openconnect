@@ -1,0 +1,15 @@
+.clear{
+    clear: both;
+}
+.groupName{
+  border:0;
+	padding:8px;
+	color:black;
+	border:solid 1px #ccc;
+	margin:0 0 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: white;
+	font-size: medium;
+}

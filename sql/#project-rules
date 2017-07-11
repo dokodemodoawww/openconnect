@@ -1,0 +1,470 @@
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■
+■このファイルの内容は情報が古い為、参考にしないこと■
+■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+Javadocの記載がない場所に警告を出すEclipseの設定-----------------------
+
+ウインドウ→設定→java→コンパイラ→Javadoc
+
+[無視]になっているプルダウンメニューを全て[警告]に変更してOK
+
+ポップアップが出てきて、これに[はい]ボタンを押す
+
+完了
+
+
+
+
+ERMaster
+--------
+DB設計書、ER図、DB設計書API（HTML版）を作成する為に、ERMasterをEclipseにインストールすること。
+
+方法：
+ヘルプ→新規ソフトウェアのインストール
+作業対象は以下とする。
+http://ermaster.sourceforge.net/update-site/
+名前はERMasterとする。
+画面操作に従い、インストールを完了すること。
+
+
+WEB.XML
+--------
+以下、テンプレート
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+id="WebApp_ID"
+version="3.1">
+
+  <display-name>OPENCONNECT</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <session-config>
+    <session-timeout>5</session-timeout>
+  </session-config>
+</web-app>
+
+
+.gitignoreファイル
+---------
+プロジェクトフォルダ直下に.gitignoreファイルを作成する。
+これは、プロジェクトに影響を与えてしまうような個別ファイルやゴミファイルをコミットしないように設定する為のものである。
+
+
+記載内容は以下の通り。
+
+
+# Java
+*.class
+*.war
+*.ear
+
+# Eclipse
+.project
+.classpath
+.settings
+
+# Idea
+.idea
+*.iml
+*.iws
+*.ipr
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Gradle
+.gradle
+!gradle-wrapper.jar
+
+# Maven
+target
+
+# Build
+out
+build
+bin
+
+# Other
+*.log
+*.swp
+*.bak
+
+JSPファイル
+---------
+Struts2を使用する場合、書き出しは以下の通りとなる。
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+
+centerタグはHTML5では非推奨である。
+また、align="center"のような記述も非推奨の為、以下のような宣言とすること。
+
+<div style="text-align:center;">
+</div>
+
+ACTIONクラス
+--------
+
+ACTIONクラスにて使用するexecuteメソッドの戻り値となる変数名は、
+String result=ERROR;
+にて初期設定をおこなうこと。
+
+executeメソッドにてSUCCESSを戻り値として画面遷移だけをおこなうクラスについては、
+
+public String execute(){
+  return SUCCESS;
+}
+
+の形式とする。
+
+
+
+DAOクラス
+---------
+
+・ユーザー認証は必ずOPENCONNECTを使って認証が完了できるようにする。
+
+・データベースとの接続方法
+例）
+Connection con = new DBConnector("com.mysql.jdbc.Driver","jdbc:mysql://localhost/","openconnect","root","mysql").getConnection();
+
+
+
+
+	public boolean select(String phoneEmail, String password) {
+		boolean res = false;
+		UserDTO dto = new UserDTO();
+
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root",
+				"mysql");
+		Connection con = db.getConnection();
+
+		String sql = "select * from users where phone_email = ? and password = ?";
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+
+			ps.setString(1, phoneEmail);
+			ps.setString(2, password);
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				userId = rs.getInt("user_id");
+				userFlg = rs.getInt("user_flg");
+				loginFlg = rs.getBoolean("login_flg");
+				phoneEmail = rs.getString("phone_email");
+				password = rs.getString("password");
+				dto.setUserFlg(rs.getInt("user_flg"));
+
+			}
+
+			if (loginFlg == res && userFlg == 3) {
+				if (this.changeLoginFlg(userId, true)) {
+					res = true;
+				}
+			}
+			if (loginFlg == res && userFlg != 3) {
+				this.changeLoginFlg(userId, res);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return res;
+	}
+
+
+	public int insert(int id, String name, String url, String genre) {
+		int count = 0;
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		Connection con = db.getConnection();
+		String sql = "insert into sites(site_id, site_name, site_url, genre) values(?,?,?,?)";
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			ps.setString(2, name);
+			ps.setString(3, url);
+			ps.setString(4, genre);
+			count = ps.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return count;
+	}
+
+
+	public boolean update(int userId, boolean loginFlg) throws SQLException {
+		boolean res = false;
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		Connection con = db.getConnection();
+
+		String sql = "UPDATE users SET login_flg = ? WHERE user_id =?";
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+
+			ps.setBoolean(1, loginFlg);
+			ps.setInt(2, userId);
+
+			ps.executeUpdate();
+			return true;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			con.close();
+		}
+		return res;
+	}
+
+	public int delete(int id){
+		int count = 0;
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		Connection con = db.getConnection();
+		String sql = "delete from site where site_id = ?";
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			count = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return count;
+	}
+
+・SQL文での*の使い方
+検索対象のフィールド数が5個以上であれば、*の使用OKとする。
+5個未満の場合は、それぞれのフィールド名を使って検索をおこなうこと。
+
+
+
+
+DAOクラスを使ってOPENCONNECTを操作する場合のテンプレートを以下に示す。
+
+package com.internousdev.shiki.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.internousdev.shiki.dto.UserDTO;
+import com.internousdev.util.DBConnector;
+import com.opensymphony.xwork2.ActionSupport;
+
+/**
+ * クラス
+ *
+ * @author HIDEAKI OKA
+ * @since 2016/12/02
+ * @version 1.0
+ */
+public class LoginDAO extends ActionSupport {
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -8567066494177048709L;
+
+	/**
+	 * ログインフラグ
+	 */
+	private boolean loginFlg;
+
+	/**
+	 * ユーザID
+	 */
+	private int userId;
+
+	/**
+	 * ユーザフラグ
+	 */
+	private int userFlg;
+
+	/**
+	 * ログインフラグ取得メソッド
+	 * @author HIDEAKI OKA
+	 * @return loginFlg ログインフラグ
+	 */
+	public boolean getLoginFlg() {
+		return loginFlg;
+	}
+
+	/**
+	 * ログインフラグ格納メソッド
+	 * @author HIDEAKI OKA
+	 * @param loginFlg ログインフラグ
+	 */
+	public void setLoginFlg(boolean loginFlg) {
+		this.loginFlg = loginFlg;
+	}
+
+	/**
+	 * ユーザID取得メソッド
+	 * @author HIDEAKI OKA
+	 * @return userId ユーザID
+	 */
+	public int getUserId() {
+		return userId;
+	}
+
+	/**
+	 * ユーザID格納メソッド
+	 * @author HIDEAKI OKA
+	 * @param userId ユーザID
+	 */
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	/**
+	 * ユーザフラグ取得メソッド
+	 * @author HIDEAKI OKA
+	 * @return userFlg ユーザフラグ
+	 */
+	public int getUserFlg() {
+		return userFlg;
+	}
+
+	/**
+	 * ユーザフラグ格納メソッド
+	 * @author HIDEAKI OKA
+	 * @param userFlg ユーザフラグ
+	 */
+	public void setUserFlg(int userFlg) {
+		this.userFlg = userFlg;
+	}
+
+	/**
+	 * メソッド
+	 *
+	 * @author HIDEAKI OKA
+	 * @param email
+	 * @param password
+	 * @return res
+	 */
+	public boolean select(String email, String password) {
+		boolean res = false;
+		UserDTO dto = new UserDTO();
+
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root",
+				"mysql");
+		Connection con = db.getConnection();
+
+		String sql = "select * from users where phone_email = ? and password = ?";
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+
+			ps.setString(1, email);
+			ps.setString(2, password);
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				userId = rs.getInt("user_id");
+				userFlg = rs.getInt("user_flg");
+				loginFlg = rs.getBoolean("login_flg");
+				email = rs.getString("phone_email");
+				password = rs.getString("password");
+				dto.setUserFlg(rs.getInt("user_flg"));
+
+			}
+
+			if (loginFlg == res && userFlg == 3) {
+				if (this.changeLoginFlg(userId, true)) {
+					res = true;
+				}
+			}
+			if (loginFlg == res && userFlg != 3) {
+				this.changeLoginFlg(userId, res);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return res;
+	}
+
+	/**
+	 * メソッド
+	 *
+	 * @author HIDEAKI OKA
+	 * @param userId
+	 * @param loginFlg
+	 * @return res
+	 */
+	public boolean changeLoginFlg(int userId, boolean loginFlg) throws SQLException {
+		boolean res = false;
+		DBConnector db = new DBConnector("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/", "openconnect", "root", "mysql");
+		Connection con = db.getConnection();
+
+		String sql = "UPDATE users SET login_flg = ? WHERE user_id =?";
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+
+			ps.setBoolean(1, loginFlg);
+			ps.setInt(2, userId);
+
+			ps.executeUpdate();
+			return true;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			con.close();
+		}
+		return res;
+	}
+}
+
+
+
+

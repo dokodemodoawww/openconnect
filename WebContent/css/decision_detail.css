@@ -1,0 +1,60 @@
+@CHARSET "UTF-8";
+
+
+td, th {
+	background-color: #f5f5f5;
+	text-align: center;
+}
+
+th {
+	white-space: nowrap;
+	border:solid 1px;
+}
+
+td{
+	border:solid 1px;
+}
+
+.return_btn {
+	height: 30px;
+	width: 60px;
+	background-color: #1987E5;
+	color: white;
+}
+
+.top-word{
+	
+}
+
+.table {
+	border: solid 2px;
+	border-color: black;
+}
+
+.t_right {
+	text-align: right;
+	width:24%;
+}
+
+.t_left{
+	width:80px;
+}
+
+
+
+
+@media screen and (min-width:200px) {
+
+.pg_none {
+	display: inline;
+}
+
+}
+
+@media screen and (min-width:768px) {
+
+.pg_none {
+	display: none;
+}
+
+}

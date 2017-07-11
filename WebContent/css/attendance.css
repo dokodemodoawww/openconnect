@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+
+
+/* submit送信ボタン */
+
+.attendance table{
+	table-layout: auto;
+	width:40%;
+	border-collapse: separate;
+	border-spacing: 0px 10px;
+}
+
+.attendance td,th{
+	font-weight:bold;
+	padding:  5px 10px;
+	width: auto;
+	height:auto;
+}
+
+.attendance textarea{
+	resize:none;
+}
+
+.attendance .button {
+	width:150px;
+	height:30px;
+	font-weight:bold;
+	color:#ffffff;
+	background-color:#51a7f9;
+	padding:5px 10px;
+	box-shadow: 0px 3px #1e90ff;
+	border-radius:2px;
+	border-style: none;
+
+
+}
+.attendance .button:hover {
+	position: relative;
+	top: 3px;
+	box-shadow: none;
+}
+
+
+@media only screen and (max-width:420px){
+	.attendance h1{
+		font-size : 150% ;
+
+		font-weight: bold;
+	}
+
+	.attendance table{
+		width:100%;
+		border-collapse:collapse;
+
+	}
+     .attendance tr{
+		display: block;
+		width:100%;
+		margin-bottom: 1.0em;
+		margin-left: 0.7em;
+    }
+    .attendance th, td{
+		display: list-item;
+		border: none;
+    }
+    #tr_reason{
+    	width:100%;
+		margin-bottom: 1.0em;
+		margin-left: 0.7em;
+    }
+
+
+}

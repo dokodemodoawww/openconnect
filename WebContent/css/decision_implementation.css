@@ -1,0 +1,74 @@
+.main{
+
+
+
+    margin-left: auto;
+    margin-right:auto;
+
+
+}
+
+
+.sub{
+
+
+
+	 margin-right:auto;
+    margin-left:auto;
+
+}
+
+.math{
+
+
+
+
+	margin-left: auto;
+	 margin-right:auto;
+
+
+
+}
+
+
+
+input{
+	border:none;
+
+}
+
+
+
+h2{
+    text-align:center;
+
+
+}
+
+
+
+textarea{
+	text-align:left;
+
+	border:none;
+}
+
+
+
+
+.file{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+.save{
+	text-align:center;
+	border:1px;
+}
+
+.w67{
+	width: 67px;
+}
+
+

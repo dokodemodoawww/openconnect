@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+#withdraw,th,td{
+	border:solid 1px;
+	border-collapse:collapse;
+}
+
+h1{
+	border-under:solid 1px
+}
+
+input[type="submit"]{
+	font-size:125%
+}
+

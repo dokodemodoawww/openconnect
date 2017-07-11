@@ -1,0 +1,94 @@
+#footer .footer-link {
+	/*position:fixed; フッターを絶対配置に指定する設定*/
+	position: relative;
+	bottom: 0px;
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	background-color:#ffffff;
+}
+
+.footer-link li a {
+	color: #192f60;
+    text-decoration: none;
+}
+
+/*footer*/
+.footer-link nav ul {
+	list-style-type: none;
+	margin-top: 10;
+	margin-bottom: 10;
+	margin-left: 0;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/*footer*/
+.footer-link nav li {
+	display: inline;
+	/*border-right: solid 2px #ffffff;*/
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/* company_overview */
+.tbl {
+	border-collapse:collapse;
+	border-spacing:0;
+	table-layout:fixed;
+	width:800px;
+	margin:0;
+
+}
+
+/* 中寄席のＣＳＳです */
+#terms p{
+    width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 固定headerの文の余白です */
+.contents p{
+  padding-top:10px;
+  margin-top:50px;
+  height:auto;
+  padding-bottom:10px;
+  margin-bottom:80px;
+}
+
+.tbl th{
+	border-bottom:1px solid #fff;
+	border-right:1px solid #fff;
+	padding:20px;
+	background-color:#dcdcdc;
+	text-align:left;
+	vertical-align:top;
+	font-weight:bold;
+	width:20px;
+}
+.tbl th td{
+	display:table-cell;
+}
+
+.tbl td {
+	border-bottom:1px solid #fff;
+	padding:20px;
+	background-color:#f5f5f5;
+	vertical-align:top;
+	width:200px;
+}
+
+/* Google Maps API */
+#map-canvas {
+	width: 550px ;
+	height: 550px ;
+}
+
+.copyright {
+	color:#fff;
+	text-align: center;
+	background-color:#333;
+}

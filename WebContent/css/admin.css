@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+
+.siteList{
+	border: 3px solid #CCC;
+	border-collapse: collapse;
+}
+.siteList th{
+	height: 3em;
+	border: 2px solid #CCC;
+	background-color: #FFCC99;
+	font-weight: bold;
+	padding: 1px;
+	width: 10%;
+	align="center"
+}
+.siteList td{
+	border: 1px solid #CCC;
+	font-weight: bold;
+	padding: 5px;
+}
+.msg{
+	color: red;
+	font-weight: 700;
+}
+
+@media screen and (max-width: 380px){
+/* スマートフォンだけ以下を適用 */
+
+#wwFormTable1 td {
+	display: block;
+    }
+#wwFormTable2 td {
+	display: block;
+    }
+#wwFormTable3 td {
+	display: block;
+    }
+input[type="text"] {
+    line-height: 1;
+    padding: 0.4em 0.6em;
+    border: 1px solid #999;
+    letter-spacing: 1px;
+    box-shadow: inset 0.2em 0.2em 0.2em #ccc;
+    background-color: #fff;
+    font-size: inherit;
+    }
+}

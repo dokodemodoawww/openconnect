@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+#decisionTitle{
+	text-align:center;
+	padding-top:100px;
+}
+
+.textInline{
+	display: inline;
+}
+
+table{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+}
+
+tr, td{
+	border: 1px solid;
+}
+
+.saveText{
+	width: 100%;
+}
+
+.center{
+	text-align: center;
+}
+
+#tableApproval{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+}
+
+.HeightTr{
+	height:100px;
+}
+@media screen and (max-width: 768px) {
+/* 768pxまでの幅の場合に適応される */
+
+     table{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+}
+
+     .saveText{
+	width: 100%;
+}
+
+	#tableApproval{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+}
+
+.textApproval{
+	width: 100%;
+}
+
+.tableCost{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+}
+
+
+}

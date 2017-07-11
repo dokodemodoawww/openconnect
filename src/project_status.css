@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+/* table, td, th{ */
+/* 	height: 1px; */
+/* 	table-layout: fixed; */
+/* 	width:200px: */
+/* /* 		white-space: normal; */ */
+/* 	display: inline; */
+/* } */
+td{
+	text-align:center;
+}
+#searchText{
+	width: 150px;
+}
+.largetext{
+	width:100px;
+	text-align:center;
+}
+

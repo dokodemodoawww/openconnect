@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+body{
+			background-image:url("../img/dokuro.png");
+		margin-right : auto;
+		margin-left:auto;
+		width:900px;
+		height:900px;
+		background-size: 100% 100%;
+}
+.zannen{
+		font-size:400%;
+		color:black;
+		font-weight: bold;
+}
+
+
+	#inner input[type="submit"]{
+	font-size:200%
+	}

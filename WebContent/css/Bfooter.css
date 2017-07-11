@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+.color{
+	background-color:#6FF5EF;
+ 	position: fixed;
+ 	bottom:0;
+ 	left:0;
+  	right:0;
+  }
+
+.contents{
+	max-width: 100%;
+	height: auto;
+	text-align:center;
+ }
+
+.a {
+	position:relative;
+	display: inline-block;
+    width: 80px;/*幅も指定できる*/
+    height: 65px;/*高さも指定できる*/
+    margin: 0px 0;/*余白も指定できる*/
+ }
+
+ .b{
+ 	position: absolute;
+	display: inline-block;
+	background-color:#ff0000;
+	color:white;
+	border-radius:50%;
+	top:0;
+ 	right:0;
+ 	height: 20px;
+ 	width: 20px;
+ 	text-align:center;
+ }
+  .bh{
+ 	position: absolute;
+	display: inline-block;
+	background-color:#ff0000;
+	color:white;
+	border-radius:50%;
+	top:0;
+ 	right:0;
+ 	height: 20px;
+ 	width: 40px;
+ 	text-align:center;
+ }
+ .bt{
+ 	position: absolute;
+	display: inline-block;
+	background-color:#ff0000;
+	color:white;
+	border-radius:50%;
+	top:0;
+ 	right:0;
+ 	height: 20px;
+ 	width: 50px;
+ 	text-align:center;
+ }
+
+.pic{
+	width:65px;
+	height:65px;
+ }
+
+
+ @media only screen and (max-device-width: 480px) {
+
+
+ .footer{
+ 	background-color:#6FF5EF;
+ 	position: fixed;
+ 	bottom:0;
+ 	left:0;
+  	right:0;
+  }
+
+.contents{
+	max-width: 100%;
+	height: auto;
+	text-align:center;
+ }
+
+.a {
+	display: inline-block;
+    width: 50px;/*幅も指定できる*/
+    height: 50px;/*高さも指定できる*/
+    margin: 0px 0;/*余白も指定できる*/
+ }
+
+.pic{
+	width:50px;
+	height:50px;
+ }

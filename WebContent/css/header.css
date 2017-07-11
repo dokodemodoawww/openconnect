@@ -1,0 +1,250 @@
+.headerSpace{
+	height: 78px;
+	width: 100%;
+    background: url('');
+    background-size: cover;
+    position: absolute;
+    z-index: auto;
+    margin: 2px 2%;
+}
+
+.logo {
+	text-align: right;
+}
+
+.dissappear{
+	margin: 10px 2%;
+	float: right;
+}
+/*タイトルロゴ--------------------------------*/
+
+
+.openConnect{
+  margin: 2px 2%;
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1em;
+  font-size: 30px;
+  text-decoration: none;
+  color: #3595db;
+  transition: .6s;
+}
+.openConnect:hover {
+    color:#ff8080;
+}
+
+.upperHeader:before,.square_btn35:after{
+  position: absolute;
+  top: 0;
+  content:'';
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin: 2px 2%;
+}
+.upperHeader:before{
+  border-left: solid 10px #0080c0;
+  border-right: solid 10px #82bcf7;
+  border-top: solid 71px #82bcf7;
+  border-bottom: solid 1px #82bcf7;
+  left: 0;
+}
+
+
+/*タイトルロゴここまで-------------------------*/
+
+/* .menuGroup{
+	width: 100%;
+	text-align: right;
+}
+
+.menu{
+	display: inline;
+	width: 150px;
+	height: 75px;
+	text-align: center;
+	position:relative;
+	z-index: 10;
+}
+
+.goButton{
+	display: inline-flex;
+	top: 68px;
+	position: absolute;
+	margin: 0 auto;
+}
+
+#menuBer{
+	text-align: left;
+    background: #80ff80;
+    width: 150px;
+    height: 40px;
+    line-height: 50px;
+    text-align: center;
+    border: #195dbe 1px solid;
+}
+
+#menuElementGroup{
+	background: #80ff80;
+	display: none;
+    border: #195dbe 1px solid;
+    width: 150px;
+    position: absolute;
+}
+
+.menuElement{
+}
+*/
+
+
+
+
+
+.part_line{
+    position: relative;
+    border-bottom: solid 2px #668ad8;
+    border-left: solid 2px #668ad8;
+    color: #668ad8 !important;
+    transition: .4s;
+    float:right;
+    }
+
+.part_line:hover {
+    padding-left: 0.9em;
+    padding-right: 0.3em;
+}
+
+
+
+/*ボタンデザインここまで-------------------------*/
+/*
+#location{
+	width: 50px;
+	height: 40px;
+}
+
+#selectBer{
+	width: 245px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	align: center;
+	float: right;
+}
+
+.pulldown2, .menu{
+list-style: none;
+}
+.pulldown2{
+width: 220px;
+}
+.category{
+	position:relative;
+color: white;
+margin-top: 0px;
+height: 40px;
+line-height: 40px;
+background-color: #6699FF;
+cursor: pointer;
+text-align: center;
+}
+
+.menu a{
+background-color:white;
+display: block;
+height: 35px;
+line-height: 35px;
+color: black;
+text-align: center;
+}
+*/
+
+
+/* navバー導入 */
+#primary_nav_wrap
+{
+	margin: 2px 2%;
+}
+
+#primary_nav_wrap ul
+{
+	list-style:none;
+	position:relative;
+	margin:0;
+	padding:0
+}
+
+#primary_nav_wrap ul a
+{
+	display:block;
+	color:#333;
+	text-decoration:none;
+	font-weight:700;
+	font-size:15px;
+	line-height:32px;
+	padding:0 12px;
+	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+#primary_nav_wrap ul li
+{
+	position:relative;
+	margin:0;
+	padding:0
+}
+
+
+#primary_nav_wrap ul ul
+{
+	display:none;
+	position:absolute;
+	top:30px;
+	left:0;
+	padding:0;
+	border: medium #333 double;
+	background-color: #fff;
+}
+
+
+#primary_nav_wrap ul ul li
+{
+	float:none;
+	width:130px
+}
+
+#primary_nav_wrap ul li:hover,
+#primary_nav_wrap ul li a:hover {
+	background-color:#87ceeb;
+}
+
+#primary_nav_wrap ul ul a
+{
+	line-height:120%;
+	padding:10px 15px
+}
+
+#primary_nav_wrap ul ul ul
+{
+	top:0;
+	left:90%
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+	display:block
+}
+
+#primary_nav_wrap .header-menu {
+	float:left;
+}
+
+#primary_nav_wrap .header-menu ul li {
+	margin-top:20px;
+}
+
+@media only screen and (max-device-width: 500px){
+	.dissappear{
+		width: 0px;
+		height: 0px;
+	}
+}

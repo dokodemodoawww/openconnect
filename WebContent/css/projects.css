@@ -1,0 +1,246 @@
+@CHARSET "UTF-8";
+
+#studentsElement {
+	display: none;
+	z-index: 100;
+}
+
+#listButton {
+	display: inline;
+}
+
+th {
+	text-align: center;
+}
+
+td {
+	text-align: center;
+}
+
+.delete {
+	display: none;
+}
+
+.delete-prepare {
+	display: none;
+}
+
+modalDelete {
+	display: inline;
+}
+
+/*body {
+	background-color: #808080;
+}*/
+p {
+	width: 100%;
+}
+
+.header {
+	background-color: #ACAFD2;
+	height: 100px;
+	text-align: center;
+}
+
+.center {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+
+input {
+	text-align: center;
+}
+
+.modal-open {
+	color: #cc0000;
+}
+
+.modal-open2 {
+	color: #cc0000;
+}
+
+/* モーダル コンテンツエリア */
+#modal-main {
+	text-align: center;
+	display: none;
+	width: 500px;
+	height: 360px;
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	color: #ff8080;
+	position: fixed;
+	z-index: 2;
+}
+/* モーダル 背景エリア */
+#modal-bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.largetext {
+	width: 200px;
+	text-align: left;
+	white-space: normal;;
+}
+
+.middletext {
+	width: 150px;
+	display: inline;
+	text-align: left;
+	white-space: normal;;
+}
+
+.smalltext {
+	width: 75px;
+	display: inline;
+	text-align: left;
+	white-space: normal;;
+}
+
+/*ページネーション*/
+#page_ctrl ul, #page_ctrl li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	align: center;
+	text-align: center;
+}
+
+#page_before li, #page_after li, #page_number li {
+	border: 1px solid #d0d0d0;
+	border-radius: 3px;
+	background: #f0f0f0;
+	color: #666666;
+	padding: 0 5px;
+	margin: 0 2px;
+}
+
+#page_ctrl li:hover {
+	background: #fafafa;
+}
+
+#page_ctrl li.terminal:hover {
+	background: #f0f0f0;
+}
+
+/* Default */
+#page_first, #page_prev, #page_number li, #page_next, #page_last {
+	cursor: pointer;
+}
+
+/* 先頭あるいは末尾ページ表示中のボタンスタイル */
+.terminal {
+	color: #000000 !important;
+	cursor: default !important;
+	color: #dddddd !important;
+}
+
+/* カレントページのスタイル */
+.current_page {
+	background: #fafafa !important;
+	font-weight: bold !important;
+}
+
+/*#pager {
+	text-align: center;
+}*/
+#contents {
+	z-index: 0;
+	font-size: 16px;
+}
+
+/* 中央寄せ */
+.centered {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	align: center;
+}
+
+/*inputのボタンデザイン*/
+.btntype {
+	font-size: 1em;
+	padding: 10px 30px;
+	background-color: #248;
+	color: #fff;
+	border-style: none;
+}
+
+.btntype {
+	background-color: #6dacfa;
+	color: #fff;
+}
+
+.btntype2 {
+	font-size: 1em;
+	padding: 10px 40px;
+	background-color: #248;
+	color: #fff;
+	border-style: none;
+}
+
+.btntype2 {
+	background-color: #6dacfa;
+	color: #fff;
+}
+
+@media only screen and (max-device-width: 900px) {
+	.add {
+		text-align: left;
+		margin-left: 0px;
+	}
+	.table-scroll {
+		overflow-x: scroll;
+	}
+	.fixedButton {
+		position: absolute;
+	}
+}
+
+/*携帯ディスプレイver-----------------------------------*/
+@media only screen and (max-device-width: 575px) {
+	.centered1 {
+		font-size: 20px;
+		font-weight: bold;
+		align: center
+	}
+	.center {
+		text-align: center;
+		align: center;
+	}
+	.fontsize {
+		font-size: 10px;
+	}
+
+	/*inputのボタンデザイン*/
+	.btntype {
+		font-size: 12px;
+		padding: 5px 15px;
+		background-color: #248;
+		color: #fff;
+		border-style: none;
+	}
+	.btntype {
+		background-color: #6dacfa;
+		color: #fff;
+	}
+	.btntype2 {
+		font-size: 12px;
+		padding: 5px 28px;
+		background-color: #248;
+		color: #fff;
+		border-style: none;
+	}
+	.btntype2 {
+		background-color: #6dacfa;
+		color: #fff;
+	}
+}

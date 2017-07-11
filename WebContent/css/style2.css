@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+
+/* SNS側のstyle.cssです。
+
+
+
+/* テキストエリアのリサイズを無効にする */
+textarea {
+  resize: none;
+}
+
+/* カーソル変更。「グループ追加」「メンバー追加」のリンクで使用 */
+.cursor{
+	cursor: pointer;
+}
+
+/* ヘッダー・フッターにコンテンツがかぶらないようにするためのdiv */
+.timeline{
+	margin-top:50px;
+	margin-bottom:70px;
+	width:100%;
+
+}
+.outline{
+	margin-top:50px;
+	margin-bottom:70px;
+	width:100%;
+
+}
+
+/* メッセージ表示をするためのdiv */
+.toast{
+    position: fixed;
+    bottom: 70px;
+    display: inline-block;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border-radius: 15px;
+    padding: 8px 15px;
+    border: none;
+    z-index: 1000;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    font-size:13px;
+}
+/* ヘッダー内にトーク相手名を表示するためのディヴ*/
+.chatroomname{
+  position: fixed;
+  top:0;
+  right:0;
+  left: 0;
+  height:50px;
+  margin:0px 60px;
+  padding:15px 15px;
+  font-size: 18px;
+  text-align:center;
+  color:#fff;
+  z-index:1031;
+  overflow: hidden;
+}

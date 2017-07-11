@@ -1,0 +1,30 @@
+h2{
+    text-align:center;
+}
+
+.friends-container{
+	width: 100%;
+	height: 80px;
+	float: left;
+	border-bottom: solid 1px lightblue;
+}
+
+.imgp{
+	margin-top: 20px;
+	margin-left: 30px;
+	float: left;
+
+
+}
+
+a{
+	margin-left:20px;
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: bold;
+
+
+}
+p{
+	margin-left: 150px;
+}
